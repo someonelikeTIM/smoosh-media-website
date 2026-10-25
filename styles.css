@@ -97,35 +97,11 @@ h1 {
   line-height: 1.65;
 }
 
-.signup {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 29px;
-  padding: 17px 25px;
-  border-radius: 8px;
-  background: var(--teal);
-  color: #082e31;
-  font-size: 15px;
+.stay-tuned {
+  margin: 29px 0 0;
+  color: var(--ink);
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.35;
-  text-decoration: none;
-}
-
-.signup:hover {
-  background: #09ccca;
-}
-
-.signup:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 4px;
-}
-
-.caption {
-  max-width: 470px;
-  margin: 13px auto 0;
-  color: var(--muted);
-  font-size: 12px;
   line-height: 1.5;
 }
 

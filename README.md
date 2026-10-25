@@ -2,7 +2,7 @@
 
 A small, buildless landing page for smoosh.media. Plain HTML and CSS, with the supplied logo stored in `assets/logo.jpg`; no package installation or JavaScript is required.
 
-The update button opens an email request to the owner-confirmed address `anactualhuman@duck.com`. It does not automatically subscribe visitors or store their data. No analytics or cookies are used.
+The page ends with a simple "Stay tuned..." message. It has no signup form, analytics, or cookies and does not collect visitor data.
 
 ## Local preview
 
