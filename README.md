@@ -10,6 +10,13 @@ From this directory, run `python -m http.server 5174 --bind 127.0.0.1`, then ope
 
 ## Hosting
 
-Publish the repository root from `main` with GitHub Pages. The `CNAME` file identifies `smoosh.media` as the custom domain. Configure that domain in the repository's Pages settings, point its DNS at GitHub Pages, and enforce HTTPS after GitHub issues the certificate.
+The public source repository is [someonelikeTIM/smoosh-media-website](https://github.com/someonelikeTIM/smoosh-media-website). GitHub Pages publishes the repository root from `main`; pushing a commit updates the website.
 
-GitHub Pages must be eligible for the account's plan to serve a public website from a private repository. Keep the source repository private as requested.
+The `CNAME` file and Pages custom-domain setting both use `smoosh.media`, so visitors keep that domain in the address bar. Porkbun manages these records with a 600-second TTL:
+
+| Type | Host | Target |
+| --- | --- | --- |
+| ALIAS | Root / blank | `someoneliketim.github.io` |
+| CNAME | `www` | `someoneliketim.github.io` |
+
+GitHub manages the HTTPS certificate. Enable Enforce HTTPS in Pages settings once the certificate is issued. The `www` address redirects to the canonical root domain. Keep the custom-domain setting and DNS records together when changing hosting.
