@@ -155,8 +155,9 @@ nav a:hover, .footer-inner a:hover { color: var(--text); }
 .pipeline-step small { font: 8px var(--mono); color: #687d6f; margin-top: -5px; }
 .mini-mark { width: 68px; }
 .pipeline-line { height: 1px; max-width: 110px; flex: 1; background: #283a30; margin: -35px 20px 0; position: relative; overflow: visible; }
-.pipeline-line i { position: absolute; top: -1px; left: 0; width: 12px; height: 3px; background: #4ad3a9; animation: travel 3s ease-in-out infinite; }
-.pipeline-line:nth-of-type(2) i { animation-delay: 1.2s; }
+.pipeline-line i { position: absolute; top: 50%; left: 0; width: min(var(--pulse-width), 100%); height: var(--pulse-height); background: #4ad3a9; transform: translateY(-50%); animation: travel var(--travel-duration) linear infinite; }
+.pipeline-incoming { --pulse-width: 28px; --pulse-height: 7px; --travel-duration: 4.6s; }
+.pipeline-outgoing { --pulse-width: 12px; --pulse-height: 3px; --travel-duration: 2.2s; }
 .activity-feed { padding: 0 20px 5px; }
 .activity-row { display: flex; align-items: center; gap: 25px; border-top: 1px solid #1c2721; padding: 13px 0; font: 9px var(--mono); color: #8ca091; animation: feed-entry 8s infinite; }
 .activity-row:nth-child(2) { animation-delay: .3s; }
@@ -191,7 +192,7 @@ details p { color: var(--muted); font-size: 13px; line-height: 1.8; padding: 0 3
 .footer-inner>span { font-size: 10px; color: #607566; padding-top: 3px; }
 .footer-wordmark { position: absolute; bottom: -5vw; left: -1vw; font-size: 24vw; letter-spacing: -2vw; line-height: .95; font-weight: 650; color: #0e1611; user-select: none; }
 @keyframes blink { 50% { opacity: 0; } }
-@keyframes travel { 0% { left: 0; opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { left: calc(100% - 12px); opacity: 0; } }
+@keyframes travel { 0% { left: 0; transform: translate(0, -50%); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { left: 100%; transform: translate(-100%, -50%); opacity: 0; } }
 @keyframes feed-entry { 0%, 5% { opacity: .3; } 12%, 100% { opacity: 1; } }
 @keyframes file-complete { 0%, 5% { opacity: .15; transform: translateX(-5px); } 15%, 100% { opacity: 1; transform: translateX(0); } }
 .motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused!important; }
