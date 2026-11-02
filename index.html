@@ -1,45 +1,125 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#ffffff">
-    <title>smoosh.media — Media processing without the busywork</title>
-    <meta name="description" content="Automatic media conversion and compression inside your business workflows. Spend less time preparing files and more time using them. Stay tuned...">
-    <link rel="canonical" href="https://smoosh.media/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="smoosh.media">
-    <meta property="og:title" content="smoosh.media — Media processing without the busywork">
-    <meta property="og:description" content="Automatic conversion and compression inside your business workflows. Spend less time preparing files and more time using them.">
-    <meta property="og:url" content="https://smoosh.media/">
-    <meta property="og:image" content="https://smoosh.media/assets/logo.jpg">
-    <meta property="og:image:alt" content="smoosh.media logo: a teal play button between charcoal film strips">
-    <meta property="og:image:width" content="1254">
-    <meta property="og:image:height" content="1254">
-    <meta name="twitter:card" content="summary">
-    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="site">
-      <header class="site-header">
-        <span class="brand">smoosh.media</span>
-        <span class="domain">smoosh.media</span>
-      </header>
-      <main class="hero">
-        <div class="logo">
-          <img src="assets/logo.jpg" alt="smoosh.media logo: a teal play button between charcoal film strips" width="1254" height="1254" fetchpriority="high" decoding="async">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090b0c">
+  <title>smoosh.media — Media processing without the busywork</title>
+  <meta name="description" content="Convert, compress, and deliver video, audio, and images. Automatically. Your media, minus the busywork.">
+  <link rel="canonical" href="https://smoosh.media/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="smoosh.media">
+  <meta property="og:title" content="smoosh.media — Media processing without the busywork">
+  <meta property="og:description" content="Convert, compress, and deliver video, audio, and images. Automatically. Your media, minus the busywork.">
+  <meta property="og:url" content="https://smoosh.media/">
+  <meta property="og:image" content="https://smoosh.media/assets/logo.jpg">
+  <meta property="og:image:alt" content="smoosh.media logo: a teal play button between charcoal film strips">
+  <meta property="og:image:width" content="1254">
+  <meta property="og:image:height" content="1254">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="icon-audio" viewBox="0 0 24 24"><path d="M4 10v4m4-7v10m4-14v18m4-14v10m4-7v4"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1"/><path d="m3 17 6-6 4 4 3-3 5 5"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m13 5v-3.5c0-1-.3-1.7-.8-2.2 2.8-.3 5.8-1.4 5.8-6.3a5 5 0 0 0-1.3-3.5c.1-.4.6-1.7-.1-3.5 0 0-1.1-.4-3.6 1.3a12 12 0 0 0-6 0C6.5 2.6 5.4 3 5.4 3c-.7 1.8-.2 3.1-.1 3.5A5 5 0 0 0 4 10c0 4.9 3 6 5.8 6.3-.5.5-.8 1.2-.8 2.2V22"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><a href="#automate"><span class="new-label">New</span> Your media workflow. Now on autopilot. <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="smoosh.media home"><span class="brand-logo" aria-hidden="true"><img src="assets/logo-dark.svg" alt="" width="1080" height="560" decoding="async"></span>smoosh<span class="brand-domain">.media</span></a>
+    <nav aria-label="Main navigation"><a href="#compress">Features</a><a href="#automate">Workflows</a><a href="#faq">FAQ</a><a class="nav-start" href="#workflow">Start smooshing <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Your media. Minus the busywork.</h1>
+      <p>Convert, compress, and deliver video, audio, and images. Automatically.</p>
+      <div class="hero-actions"><span class="format-command"><svg class="icon" aria-hidden="true"><use href="#icon-video"/></svg> Video <span>/</span> Audio <span>/</span> Images</span><a class="button" href="#workflow">Start smooshing <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+    </section>
+
+    <section class="workflow-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="workflow-screen" data-stage="complete">
+        <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><h2 id="workflow-title">smoosh / launch-campaign</h2><button id="workflow-toggle" class="icon-button" type="button" aria-label="Pause workflow animation"><span class="pause-glyph" aria-hidden="true">Ⅱ</span></button></div>
+        <div class="workspace-tabs" role="group" aria-label="Media workflow"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="audio" aria-pressed="false">Audio</button><button type="button" data-media="image" aria-pressed="false">Images</button><span class="workspace-location">/media/inbox</span></div>
+        <div class="terminal-body">
+          <p class="terminal-command"><span aria-hidden="true">❯</span> <span id="typed-command">smoosh launch-campaign --preset web</span><span class="cursor" aria-hidden="true"></span></p>
+          <p class="terminal-heading"><span class="terminal-marker" aria-hidden="true">↳</span> <span id="terminal-heading">3 files found. Let's lighten the load.</span></p>
+          <div class="queue" aria-label="Media processing queue">
+            <div class="queue-header"><span>FILE</span><span>SIZE</span><span>STATUS</span></div>
+            <div class="queue-row" data-row="0" data-state="done"><span class="queue-file"><span class="row-marker" aria-hidden="true">✓</span><span class="file-name">launch-film.mp4</span></span><span class="queue-size">18.6 MB</span><span class="queue-state">Done</span></div>
+            <div class="queue-row" data-row="1" data-state="done"><span class="queue-file"><span class="row-marker" aria-hidden="true">✓</span><span class="file-name">behind-the-scenes.mp4</span></span><span class="queue-size">13.9 MB</span><span class="queue-state">Done</span></div>
+            <div class="queue-row" data-row="2" data-state="done"><span class="queue-file"><span class="row-marker" aria-hidden="true">✓</span><span class="file-name">product-cut.mp4</span></span><span class="queue-size">6.9 MB</span><span class="queue-state">Done</span></div>
+          </div>
+          <div class="encoding"><div class="encoding-label"><span id="encoding-status">Optimized for the web</span><span id="encoding-percent">100%</span></div><div class="encoding-track"><div id="encoding-progress"></div></div></div>
+          <div class="terminal-result"><p><span class="terminal-marker" aria-hidden="true">✓</span> <span id="delivery-status">3 files delivered to /media/ready</span></p><p class="result-sizes"><span id="original-total">526 MB</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg><strong id="output-total">39.4 MB</strong><span class="saved-label" id="saved-label">92.5% lighter</span></p></div>
+          <p class="terminal-finish" id="terminal-finish">Same content. A lot less file.</p>
         </div>
-        <h1>smoosh.media</h1>
-        <p class="tagline">Media processing without the busywork.</p>
-        <p class="about">smoosh.media automates conversion and compression inside your business workflows, so your team can spend less time preparing files and more time using them.</p>
-        <p class="stay-tuned">Stay tuned...</p>
-      </main>
-      <footer class="site-footer">
-        <span>© 2026 smoosh.media</span>
-        <span>Currently in development.</span>
-      </footer>
-    </div>
-  </body>
+        <div class="workspace-footer"><span><span class="status-dot"></span> Workflow active</span><button class="text-button" id="replay" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-replay"/></svg>Run again</button></div>
+      </div>
+      <a class="button workspace-cta" href="#automate">Put your workflow on autopilot <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+    </section>
+
+    <section id="use-cases" class="use-cases content-width" aria-label="Built for your everyday media work">
+      <a class="use-case" href="#compress">
+        <span class="use-case-label">CLIENT REVIEWS</span>
+        <h2>Share a lighter cut for review.</h2>
+        <p>Turn full-size video and audio into lighter files for quick feedback.</p>
+        <span class="use-case-link">Make it easier to share <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="use-case" href="#compress">
+        <span class="use-case-label">WEB PUBLISHING</span>
+        <h2>Make every page a little lighter.</h2>
+        <p>Prepare images and video for the web, with the format and size to match.</p>
+        <span class="use-case-link">Get media web-ready <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="use-case" href="#automate">
+        <span class="use-case-label">RECURRING DELIVERIES</span>
+        <h2>Put repeat file prep on autopilot.</h2>
+        <p>Save your output settings and apply them automatically as new media arrives.</p>
+        <span class="use-case-link">Automate the repeat work <span aria-hidden="true">↗</span></span>
+      </a>
+    </section>
+
+    <section class="feature-section content-width" id="compress" aria-labelledby="compress-title">
+      <div class="film-visual">
+        <div class="film-topline"><span>creative-workflows.mp4</span><span>960 × 540 <span aria-hidden="true">·</span> H.264</span></div>
+        <div class="film-stage"><video id="product-film" controls loop muted playsinline preload="metadata" poster="assets/creative-workflows-poster.jpg" aria-label="People preparing auditions, editing a rough cut, collaborating on delivery, and recording creator content"><source src="assets/creative-workflows.mp4" type="video/mp4"></video><span class="film-scene" id="film-scene" aria-hidden="true">01 / AUDITION TAPES</span><span class="film-corner film-corner-tl" aria-hidden="true"></span><span class="film-corner film-corner-br" aria-hidden="true"></span><div class="film-caption"><span>Original detail.<br><strong>A fraction of the size.</strong></span><button class="film-toggle icon-button" type="button" id="film-toggle" aria-label="Pause video"><span aria-hidden="true">Ⅱ</span></button></div></div>
+        <div class="film-stats"><span>248 MB <span aria-hidden="true">→</span> <strong>18.6 MB</strong></span><span class="film-saving">92.5% smaller <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></span></div>
+      </div>
+      <div class="feature-copy"><h2 id="compress-title">Keep the detail. Lose the weight.</h2><p>Smaller files that still look and sound like your work. Smoosh finds the right balance of quality, format, and size, so your media is ready for wherever it goes next.</p><a class="inline-link" href="#workflow">Find your format <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="feature-section content-width" id="automate" aria-labelledby="automate-title">
+      <div class="automation-visual">
+        <div class="automation-header"><span><span class="status-dot"></span> launch-campaign</span><span class="automation-state">LIVE</span></div>
+        <div class="pipeline"><div class="pipeline-step"><svg class="icon" aria-hidden="true"><use href="#icon-video"/></svg><span>Media arrives</span><small>/media/inbox</small></div><span class="pipeline-line" aria-hidden="true"><i></i></span><div class="pipeline-step pipeline-smoosh"><span class="mini-mark" aria-hidden="true"><img src="assets/logo-dark.svg" alt="" width="1080" height="560" loading="lazy" decoding="async"></span><span>Smoosh handles it</span><small>Convert + compress</small></div><span class="pipeline-line" aria-hidden="true"><i></i></span><div class="pipeline-step"><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span>Ready to go</span><small>/media/ready</small></div></div>
+        <div class="activity-feed"><div class="activity-row"><span class="feed-time">Just now</span><span><span class="activity-check" aria-hidden="true">✓</span> launch-film.mp4 delivered</span><span>18.6 MB</span></div><div class="activity-row"><span class="feed-time">12s ago</span><span><span class="activity-check" aria-hidden="true">✓</span> cover-art.webp delivered</span><span>0.8 MB</span></div><div class="activity-row"><span class="feed-time">24s ago</span><span><span class="activity-check" aria-hidden="true">✓</span> voiceover.mp3 delivered</span><span>3.2 MB</span></div></div>
+      </div>
+      <div class="feature-copy"><h2 id="automate-title">Set it once. Get on with your day.</h2><p>Choose where your media comes from and where it needs to go. Every new file gets converted, compressed, and delivered automatically. Your workflow keeps moving. You keep creating.</p><a class="inline-link" href="#workflow">Watch a workflow run <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="feature-section content-width batch-section" aria-labelledby="batch-title">
+      <div class="batch-visual"><div class="batch-title"><span>One workflow. Every file.</span><span>03 / 03</span></div><div class="batch-line"><span>launch-film.mov</span><span class="batch-arrow" aria-hidden="true">→</span><span>launch-film.mp4</span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></div><div class="batch-line"><span>voiceover.wav</span><span class="batch-arrow" aria-hidden="true">→</span><span>voiceover.mp3</span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></div><div class="batch-line"><span>cover-art.png</span><span class="batch-arrow" aria-hidden="true">→</span><span>cover-art.webp</span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></div></div>
+      <div class="feature-copy"><h2 id="batch-title">A whole folder. One less thing to do.</h2><p>Video, audio, images. Bring the whole project. Apply your presets across a batch and let every file find its way to the right format.</p></div>
+    </section>
+
+    <section class="faq content-width" id="faq" aria-label="Frequently asked questions">
+      <details><summary>What does smoosh.media do?<span aria-hidden="true">⌄</span></summary><p>Smoosh converts, compresses, and delivers your video, audio, and images. Prepare one file or put a whole workflow on autopilot, with output settings that fit the way you work.</p></details>
+      <details><summary>Which formats can I use?<span aria-hidden="true">⌄</span></summary><p>Work with your everyday video, audio, and image formats, including MOV, MP4, WAV, MP3, PNG, JPEG, WebP, and AVIF. Choose a format yourself or use a preset for web, sharing, and storage.</p></details>
+      <details><summary>Can I control the quality?<span aria-hidden="true">⌄</span></summary><p>Yes. Choose your output format, resolution, and quality, then save those settings as a preset. Keep more detail for final delivery or make a lighter version for a quick review.</p></details>
+      <details><summary>Can I process a whole folder?<span aria-hidden="true">⌄</span></summary><p>Absolutely. Add a batch or connect a folder to a workflow. Smoosh applies your settings to each file and keeps the results together, ready for the next step.</p></details>
+      <details><summary>How do automatic workflows work?<span aria-hidden="true">⌄</span></summary><p>Pick an input, choose your conversion and compression settings, and set a destination. New media is prepared and delivered as it arrives. Set it once, then let it run.</p></details>
+    </section>
+    <section class="closing content-width" aria-labelledby="closing-title"><h2 id="closing-title">A little smoosh. A lot less busywork.</h2><a class="button" href="#workflow">Start smooshing <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a class="brand" href="./"><span class="brand-logo" aria-hidden="true"><img src="assets/logo-dark.svg" alt="" width="1080" height="560" decoding="async"></span>smoosh<span class="brand-domain">.media</span></a><div><a href="#compress">Features</a><a href="#automate">Workflows</a><a href="#faq">FAQ</a></div><span>© 2026 smoosh.media</span></div><span class="footer-wordmark" aria-hidden="true">smoosh.</span></footer>
+</body>
 </html>
