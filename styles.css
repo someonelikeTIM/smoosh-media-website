@@ -157,17 +157,21 @@ nav a:hover, .footer-inner a:hover { color: var(--text); }
 .mini-mark { width: 68px; }
 .pipeline-line { height: 1px; max-width: 110px; flex: 1; background: #283a30; margin: 36px 12px 0; position: relative; overflow: visible; }
 .pipeline-line i { position: absolute; top: 50%; left: 0; width: min(var(--pulse-width), 100%); height: var(--pulse-height); background: #4ad3a9; transform: translateY(-50%); animation: travel var(--travel-duration) linear infinite; }
-.pipeline-incoming { --pulse-width: 28px; --pulse-height: 7px; --travel-duration: 4.6s; }
-.pipeline-outgoing { margin-right: 0; --pulse-width: 8px; --pulse-height: 3px; --travel-duration: 1.1s; }
-.pipeline-outgoing i:nth-child(2) { animation-delay: -.55s; }
+.pipeline-incoming { --pulse-width: 28px; --pulse-height: 7px; --travel-duration: 2.8s; }
+.pipeline-outgoing { margin-right: 0; --pulse-width: 8px; --pulse-height: 3px; --travel-duration: 2.4s; }
+.pipeline-outgoing i { animation-name: distribute-trunk; }
+.pipeline-outgoing i:nth-child(2) { animation-delay: -1.2s; }
 .distribution-map { display: block; width: 133px; height: 72px; }
 .distribution-packet { fill: #4ad3a9; transform: translate(20px,36px); }
-.packet-social { animation: distribute-social 1.5s linear infinite; animation-delay: -.2s; }
-.packet-web { animation: distribute-web 1.2s linear infinite; animation-delay: -.6s; }
-.packet-clients { animation: distribute-clients 1.5s linear infinite; animation-delay: -.9s; }
-@keyframes distribute-social { 0% { transform: translate(0px,36px); opacity: 0; } 15% { opacity: 1; } 30% { transform: translate(20px,36px); } 65% { transform: translate(20px,12px); } 90% { opacity: 1; } 100% { transform: translate(50px,12px); opacity: 0; } }
-@keyframes distribute-web { 0% { transform: translate(0px,36px); opacity: 0; } 15%,85% { opacity: 1; } 100% { transform: translate(50px,36px); opacity: 0; } }
-@keyframes distribute-clients { 0% { transform: translate(0px,36px); opacity: 0; } 15% { opacity: 1; } 30% { transform: translate(20px,36px); } 65% { transform: translate(20px,60px); } 90% { opacity: 1; } 100% { transform: translate(50px,60px); opacity: 0; } }
+.packet-social { animation: distribute-social 2.4s linear infinite; }
+.packet-web { animation: distribute-web 2.4s linear infinite; }
+.packet-clients { animation: distribute-clients 2.4s linear infinite; }
+.distribution-batch-offset .distribution-packet { animation-delay: -1.2s; }
+/* Each trunk packet becomes three simultaneous branches on one shared cycle. */
+@keyframes distribute-trunk { 0% { left: 0; transform: translate(0,-50%); opacity: 0; } 6% { opacity: 1; } 45% { left: 100%; transform: translate(-100%,-50%); opacity: 1; } 49%,100% { left: 100%; transform: translate(-100%,-50%); opacity: 0; } }
+@keyframes distribute-social { 0%,44% { transform: translate(0px,36px); opacity: 0; } 45% { transform: translate(0px,36px); opacity: 1; } 55% { transform: translate(20px,36px); } 70% { transform: translate(20px,12px); } 90% { transform: translate(50px,12px); opacity: 1; } 95%,100% { transform: translate(50px,12px); opacity: 0; } }
+@keyframes distribute-web { 0%,44% { transform: translate(0px,36px); opacity: 0; } 45% { transform: translate(0px,36px); opacity: 1; } 55% { transform: translate(20px,36px); } 70% { transform: translate(35px,36px); } 90% { transform: translate(50px,36px); opacity: 1; } 95%,100% { transform: translate(50px,36px); opacity: 0; } }
+@keyframes distribute-clients { 0%,44% { transform: translate(0px,36px); opacity: 0; } 45% { transform: translate(0px,36px); opacity: 1; } 55% { transform: translate(20px,36px); } 70% { transform: translate(20px,60px); } 90% { transform: translate(50px,60px); opacity: 1; } 95%,100% { transform: translate(50px,60px); opacity: 0; } }
 .activity-feed { padding: 0 20px 5px; }
 .activity-row { display: flex; align-items: center; gap: 25px; border-top: 1px solid #1c2721; padding: 13px 0; font: 9px var(--mono); color: #8ca091; animation: feed-entry 8s infinite; }
 .activity-row:nth-child(2) { animation-delay: .3s; }
@@ -262,7 +266,9 @@ details p { color: var(--muted); font-size: 13px; line-height: 1.8; padding: 0 3
   .pipeline-step>span:not(.mini-mark) { grid-column: 2; align-self: end; font-size: 12px; line-height: 1.4; }
   .pipeline-step small { grid-column: 2; align-self: start; margin-top: 0; font-size: 9px; line-height: 1.6; }
   .pipeline-line { flex: none; width: 1px; height: 28px; margin: 3px 0 3px 36px; }
-  .pipeline-line i { top: 0; left: 50%; width: var(--pulse-height); height: min(var(--pulse-width),100%); transform: translate(-50%,0); animation-name: travel-down; }
+  .pipeline-line i { top: 0; left: 50%; width: var(--pulse-height); height: min(var(--pulse-width),60%); transform: translate(-50%,0); animation-name: travel-down; }
+  .pipeline-outgoing i { animation-name: distribute-trunk-down; }
+  @keyframes distribute-trunk-down { 0% { top: 0; transform: translate(-50%,0); opacity: 0; } 6% { opacity: 1; } 45% { top: 100%; transform: translate(-50%,-100%); opacity: 1; } 49%,100% { top: 100%; transform: translate(-50%,-100%); opacity: 0; } }
   .distribution-map { width: 90px; height: auto; }
   .pipeline-distribution-step .pipeline-glyph { width: 90px; }
   .pipeline-distribution-step small { max-width: 180px; }
@@ -481,4 +487,16 @@ details p { color: var(--muted); font-size: 13px; line-height: 1.8; padding: 0 3
   #pricing-hero h1 { font-size: 37px; }
   .storage-calculator h2 { font-size: 23px; }
   #pricing-hero .hero-actions { gap: 20px; }
+}
+
+/* Full-width alternate bands share the footer's existing brand wordmark. */
+.section-band { position: relative; isolation: isolate; overflow: hidden; margin-top: 64px; padding-block: 44px; background: #141918; }
+.section-band>.footer-wordmark { z-index: -1; color: #293b31; opacity: .32; pointer-events: none; }
+.section-band>section { margin-block: 0; }
+.section-band>#plans { margin-top: 0; }
+.section-band>#billing { margin: 0 auto 32px; }
+.section-band>.closing { padding-block: 38px; }
+@media(max-width:680px) {
+  .section-band { margin-top: 48px; padding-block: 32px; }
+  .section-band>.closing { padding-block: 25px; }
 }
