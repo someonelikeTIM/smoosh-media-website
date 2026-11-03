@@ -489,9 +489,8 @@ details p { color: var(--muted); font-size: 13px; line-height: 1.8; padding: 0 3
   #pricing-hero .hero-actions { gap: 20px; }
 }
 
-/* Full-width alternate bands share the footer's existing brand wordmark. */
+/* Full-width alternating section backgrounds. */
 .section-band { position: relative; isolation: isolate; overflow: hidden; margin-top: 64px; padding-block: 44px; background: #141918; }
-.section-band>.footer-wordmark { z-index: -1; color: #293b31; opacity: .32; pointer-events: none; }
 .section-band>section { margin-block: 0; }
 .section-band>#plans { margin-top: 0; }
 .section-band>#billing { margin: 0 auto 32px; }

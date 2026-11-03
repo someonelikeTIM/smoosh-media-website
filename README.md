@@ -2,7 +2,7 @@
 
 The smoosh.media website. Plain HTML, CSS, and vanilla JavaScript, served directly from GitHub Pages. No framework, package installation, build step, or backend is needed to serve the site.
 
-The visual direction follows [React Doctor](https://www.react.doctor/): near-black surfaces, Inter typography, a compact centered hero, an automatically running product sequence, and large media sections followed by short explanations. Product visuals use flat, square-edged interfaces and thin rules. Alternating full-width dark-grey section bands reuse the footer wordmark on both pages.
+The visual direction follows [React Doctor](https://www.react.doctor/): near-black surfaces, Inter typography, a compact centered hero, an automatically running product sequence, and large media sections followed by short explanations. Product visuals use flat, square-edged interfaces and thin rules. Alternating full-width dark-grey section bands distinguish sections on both pages.
 
 The homepage includes:
 
