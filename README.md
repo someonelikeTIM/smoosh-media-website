@@ -48,3 +48,9 @@ The `CNAME` file and Pages custom-domain setting both use `smoosh.media`, so vis
 | CNAME | `www` | `someoneliketim.github.io` |
 
 GitHub manages the HTTPS certificate. The `www` address redirects to the canonical root domain. Keep the custom-domain setting and DNS records together when changing hosting.
+
+## Closeout and internal research
+
+Website work was closed out on November 3, 2026. The local handoff is `work/closeout-2026-11-03/README.md`; it indexes supplier-cost assumptions, independently checked contribution margins, official competitor research, storage-calculator examples, source evidence, release checks, and remaining product inputs. A portable zip and SHA-256 manifest accompany that package.
+
+`work/` is intentionally ignored. This repository and its Pages source are public; internal supplier budgets and margin research are not included in the published files. The dated archive under `work/archive/2026-11-03/` retains superseded edit scripts and preview images with original paths and file hashes. Deployed assets remain in `assets/`.
